@@ -46,7 +46,7 @@ const Navbar = () => {
           </ul>
           {/* <button className="btn btn-primary" onClick={handleDisplay}>User details</button> */}
 
-          <UserProfile />
+          {localStorage.getItem("token") && (<UserProfile />)}
 
           {!localStorage.getItem('token') ? <form className='d-flex' role='search'>
 
